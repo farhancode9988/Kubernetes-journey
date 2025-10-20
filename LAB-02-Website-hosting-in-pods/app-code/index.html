@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Haven | LAB-04 Kubernetes Static Site</title>
+    <style>
+        /* Define a modern color palette */
+        :root {
+            --color-primary: #1F2833; /* Dark Navy/Black for headers */
+            --color-accent: #FF416C; /* Bright Coral/Pink for CTA */
+            --color-light: #F7F7F7; /* Light background */
+            --color-text: #333;
+        }
+
+        body { 
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            background-color: var(--color-light); 
+            color: var(--color-text); 
+            margin: 0; 
+            line-height: 1.6;
+        }
+
+        /* Header / Navigation Bar */
+        .header {
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            padding: 1.5rem 3rem;
+            text-align: left;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .header a {
+            color: var(--color-light); 
+            text-decoration: none; 
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        
+        .header a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section - The big tempting area */
+        .hero {
+            /* Placeholder image link that loads instantly */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://placehold.co/1200x500/A0A0A0/FFFFFF?text=New+Collection+Arrivals');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            background-color: var(--color-accent);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e5395a; /* Slightly darker coral */
+        }
+
+        /* Content Section / Product Grid Placeholder */
+        .content {
+            text-align: center;
+            padding: 0 1rem 3rem 1rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            /* Responsive grid: auto-fit columns with a minimum width of 280px */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            margin: 0 0 5px 0;
+            color: var(--color-primary);
+        }
+
+        .product-info p {
+            margin: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 1. Header (Navigation) -->
+    <header class="header">
+        STYLE HAVEN
+        <span style="font-size: 0.9rem; float: right; font-weight: 300; letter-spacing: normal;">
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </span>
+    </header>
+
+    <!-- 2. Hero Section (Call to Action) -->
+    <section class="hero">
+        <h1>Fresh Styles for Fall</h1>
+
+        <a href="#" class="cta-button">Shop The Collection</a>
+    </section>
+
+    <!-- 3. Content Area (Product Grid Placeholder) -->
+    <div class="content">
+        <h2>Featured Arrivals</h2>
+        
+        <div class="product-grid">
+            
+            <!-- Product 1: Navy Tee  -->
+            <div class="product-card">
+                <img src="https://placehold.co/300x300/1F2833/FFFFFF?text=Navy+Tee" alt="Navy T-Shirt" onerror="this.onerror=null; this.src='https://placehold.co/300x300/F0F8FF/1F2833?text=Item+1+Placeholder'">
+                <div class="product-info">
+                    <h3>The Classic Tee</h3>
+                    <p>$29.99</p>
+                </div>
+            </div>
+
+            <!-- Product 2: Coral Dress  -->
+            <div class="product-card">
+                <img src="https://placehold.co/300x300/FF416C/FFFFFF?text=Coral+Dress" alt="Coral Dress" onerror="this.onerror=null; this.src='https://placehold.co/300x300/F0F8FF/1F2833?text=Item+2+Placeholder'">
+                <div class="product-info">
+                    <h3>Coral Maxi Dress</h3>
+                    <p>$79.50</p>
+                </div>
+            </div>
+
+            <!-- Product 3: Essential Denim  -->
+            <div class="product-card">
+                <img src="https://placehold.co/300x300/A9A9A9/1F2833?text=Denim+Jacket" alt="Denim Jacket" onerror="this.onerror=null; this.src='https://placehold.co/300x300/F0F8FF/1F2833?text=Item+3+Placeholder'">
+                <div class="product-info">
+                    <h3>Essential Denim</h3>
+                    <p>$110.00</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <p style="margin-top: 3rem; font-style: italic; color: #666;">
+            (This entire page is served statically by Nginx containers in Minikube, demonstrating simple deployment.)
+        </p>
+    </div>
+
+</body>
+</html>
