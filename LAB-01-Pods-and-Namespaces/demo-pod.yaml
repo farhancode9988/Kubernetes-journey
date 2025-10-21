@@ -4,6 +4,7 @@ kind: Namespace
 metadata:
   name: Demo-namespace
 
+---
 apiVersion: v1
 kind: Pod
 metadata:
